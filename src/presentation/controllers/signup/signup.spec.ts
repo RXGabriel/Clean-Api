@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/consistent-type-imports */
 import { SignUpController } from './signup'
 import { MissingParamError, InvalidParamError, ServerError } from '../../errors'
-import { type EmailValidator, type AccountModel, type AddAccount, type AddAccountModel } from './signup-protocols'
+import { EmailValidator, AccountModel, AddAccount, AddAccountModel } from './signup-protocols'
 
 const makeEmailValidator = (): EmailValidator => {
   class EmailValidatorStub implements EmailValidator {
