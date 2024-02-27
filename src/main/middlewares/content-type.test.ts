@@ -8,7 +8,7 @@ describe('Content Type Middleware', () => {
     })
     await request(app)
       .get('/test_content_type')
-      .expect('content_type', /json/)
+      .expect('Content-Type', /json/)
   })
 
   test('Should return xml content type when forced', async () => {
@@ -18,6 +18,6 @@ describe('Content Type Middleware', () => {
     })
     await request(app)
       .get('/test_content_type_xml')
-      .expect('content_type', /xml/)
+      .expect('Content-Type', /xml/)
   })
 })
